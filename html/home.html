@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Study Portal | Dashboard</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/home.css" />
+
+    <!-- Poppins font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Boxicons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="study-portal">
+        <i class="bx bx-desk"></i>
+        <h1>Study Portal</h1>
+      </div>
+
+      <div class="links">
+        <a href="home.html" class="active">Dashboard</a>
+        <a href="courses.html">My Courses</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="resources.html">Resources</a>
+        <a href="preparations.html">Preparations</a>
+        <a href="settings.html">Settings</a>
+      </div>
+
+      <div class="search-input">
+        <i class="bx bx-search-alt"></i>
+        <input
+          type="search"
+          placeholder="Search courses, tasks, resources..."
+          aria-label="Search"
+        />
+      </div>
+    </nav>
+
+    <!-- Main Dashboard -->
+    <main class="dashboard">
+      <!-- Welcome Section -->
+      <section class="welcome">
+        <div>
+          <p class="welcome-label">STUDENT DASHBOARD</p>
+          <h2>Welcome back, Student! 👋</h2>
+          <p>Here's an overview of your academic activities.</p>
+        </div>
+      </section>
+
+      <!-- Summary Cards -->
+      <section class="dashboard-cards">
+        <article class="card">
+          <div class="card-top">
+            <div class="card-icon blue">
+              <i class="bx bx-book-open"></i>
+            </div>
+            <span class="card-label">ACADEMICS</span>
+          </div>
+
+          <h3>5</h3>
+          <p>My Courses</p>
+          <small>Courses you're enrolled in</small>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <div class="card-icon orange">
+              <i class="bx bx-task"></i>
+            </div>
+            <span class="card-label">PRODUCTIVITY</span>
+          </div>
+
+          <h3>4</h3>
+          <p>Pending Tasks</p>
+          <small>Tasks waiting for completion</small>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <div class="card-icon purple">
+              <i class="bx bx-calendar"></i>
+            </div>
+            <span class="card-label">ASSESSMENTS</span>
+          </div>
+
+          <h3>2</h3>
+          <p>Upcoming Tests</p>
+          <small>Tests on your schedule</small>
+        </article>
+
+        <article class="card">
+          <div class="card-top">
+            <div class="card-icon green">
+              <i class="bx bx-trending-up"></i>
+            </div>
+            <span class="card-label">YOUR PROGRESS</span>
+          </div>
+
+          <h3>75%</h3>
+          <p>Study Progress</p>
+          <small>Your weekly study goal</small>
+        </article>
+      </section>
+
+      <!-- Dashboard Content -->
+      <section class="dashboard-content">
+        <!-- Today's Schedule -->
+        <article class="content-panel">
+          <div class="panel-heading">
+            <div>
+              <h2>Today's Schedule</h2>
+              <p>Your planned study activities</p>
+            </div>
+
+            <i class="bx bx-calendar-event panel-icon"></i>
+          </div>
+
+          <div class="schedule-item">
+            <div class="schedule-time">09:00 AM</div>
+            <div class="schedule-details">
+              <h3>Financial Accounting</h3>
+              <p>Chapter 4 revision</p>
+            </div>
+            <span class="schedule-status">Study</span>
+          </div>
+
+          <div class="schedule-item">
+            <div class="schedule-time">11:00 AM</div>
+            <div class="schedule-details">
+              <h3>Statistics</h3>
+              <p>Practice questions</p>
+            </div>
+            <span class="schedule-status">Practice</span>
+          </div>
+
+          <div class="schedule-item">
+            <div class="schedule-time">02:00 PM</div>
+            <div class="schedule-details">
+              <h3>Economics</h3>
+              <p>Lecture notes revision</p>
+            </div>
+            <span class="schedule-status">Revision</span>
+          </div>
+        </article>
+
+        <!-- Upcoming Deadlines -->
+        <article class="content-panel">
+          <div class="panel-heading">
+            <div>
+              <h2>Upcoming Deadlines</h2>
+              <p>Keep track of important dates</p>
+            </div>
+
+            <i class="bx bx-alarm panel-icon"></i>
+          </div>
+
+          <div class="deadline-item">
+            <div class="deadline-icon">
+              <i class="bx bx-file"></i>
+            </div>
+
+            <div class="deadline-details">
+              <h3>Accounting Assignment</h3>
+              <p>Financial Accounting</p>
+            </div>
+
+            <span class="deadline-date">12 Nov</span>
+          </div>
+
+          <div class="deadline-item">
+            <div class="deadline-icon">
+              <i class="bx bx-book"></i>
+            </div>
+
+            <div class="deadline-details">
+              <h3>Statistics Test</h3>
+              <p>Statistics</p>
+            </div>
+
+            <span class="deadline-date">15 Nov</span>
+          </div>
+
+          <div class="deadline-item">
+            <div class="deadline-icon">
+              <i class="bx bx-edit"></i>
+            </div>
+
+            <div class="deadline-details">
+              <h3>Economics Project</h3>
+              <p>Economics</p>
+            </div>
+
+            <span class="deadline-date">18 Nov</span>
+          </div>
+        </article>
+      </section>
+
+      <footer class="footer">
+        <p>© 2026 Student Hub. Supporting your academic journey.</p>
+      </footer>
+    </main>
+  </body>
+</html>

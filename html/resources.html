@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resources | StudentHub</title>
+
+    <link rel="stylesheet" href="/css/resources.css" />
+    <!-- Poppins Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Boxicons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+      <div class="study-portal">
+        <i class="bx bx-desk"></i>
+        <h1>Study Portal</h1>
+      </div>
+
+      <div class="links">
+        <a href="home.html">Dashboard</a>
+        <a href="courses.html">My Courses</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="resources.html" class="active">Resources</a>
+        <a href="preparations.html">Preparations</a>
+        <a href="settings.html">Settings</a>
+      </div>
+
+      <div class="search-input">
+        <i class="bx bx-search-alt"></i>
+        <input
+          type="search"
+          placeholder="Search courses, tasks, resources..."
+          aria-label="Search"
+        />
+      </div>
+    </nav>
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+      <header class="page-header">
+        <div>
+          <h1>My Resources</h1>
+          <p>Keep all your academic materials organised in one place.</p>
+        </div>
+
+        <button id="addResourceBtn">+ Add Resource</button>
+      </header>
+
+      <!-- OVERVIEW -->
+      <section class="overview-grid">
+        <div class="overview-card">
+          <h3>Total Resources</h3>
+          <p id="totalResources">0</p>
+        </div>
+
+        <div class="overview-card">
+          <h3>Lecture Notes</h3>
+          <p id="lectureNotes">0</p>
+        </div>
+
+        <div class="overview-card">
+          <h3>Past Papers</h3>
+          <p id="pastPapers">0</p>
+        </div>
+
+        <div class="overview-card">
+          <h3>Textbooks</h3>
+          <p id="textbooks">0</p>
+        </div>
+      </section>
+
+      <!-- SEARCH AND FILTER -->
+      <section class="resources-toolbar">
+        <input
+          type="text"
+          id="searchResources"
+          placeholder="Search resources..."
+        />
+
+        <select id="filterCategory">
+          <option value="all">All Categories</option>
+          <option value="Lecture Notes">Lecture Notes</option>
+          <option value="Textbooks">Textbooks</option>
+          <option value="Presentations">Presentations</option>
+          <option value="Videos">Videos</option>
+          <option value="Past Papers">Past Papers</option>
+          <option value="Other Resources">Other Resources</option>
+        </select>
+
+        <select id="sortResources">
+          <option value="newest">Newest First</option>
+          <option value="oldest">Oldest First</option>
+          <option value="az">A - Z</option>
+          <option value="za">Z - A</option>
+        </select>
+      </section>
+
+      <!-- RESOURCE LIST -->
+      <section class="resources-section">
+        <div class="section-heading">
+          <div>
+            <h2>All Resources</h2>
+            <p>Your saved academic materials.</p>
+          </div>
+        </div>
+
+        <div id="resourcesContainer" class="resources-grid">
+          <!-- Resources will appear here -->
+        </div>
+      </section>
+    </main>
+
+    <!-- ADD RESOURCE MODAL -->
+    <div id="resourceModal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Add Resource</h2>
+          <button type="button" id="closeModalBtn">&times;</button>
+        </div>
+
+        <form id="resourceForm">
+          <label for="resourceTitle">Resource Name</label>
+          <input
+            type="text"
+            id="resourceTitle"
+            placeholder="e.g. Financial Accounting Notes"
+            required
+          />
+
+          <label for="resourceCategory">Category</label>
+          <select id="resourceCategory" required>
+            <option value="">Select Category</option>
+            <option value="Lecture Notes">Lecture Notes</option>
+            <option value="Textbooks">Textbooks</option>
+            <option value="Presentations">Presentations</option>
+            <option value="Videos">Videos</option>
+            <option value="Past Papers">Past Papers</option>
+            <option value="Other Resources">Other Resources</option>
+          </select>
+
+          <label for="resourceCourse">Course / Subject</label>
+          <input
+            type="text"
+            id="resourceCourse"
+            placeholder="e.g. Financial Accounting"
+          />
+
+          <label for="resourceFile">Upload File</label>
+          <input
+            type="file"
+            id="resourceFile"
+            accept=".pdf,.doc,.docx,.ppt,.pptx,.xls,.xlsx,.txt"
+          />
+
+          <p class="or-text">OR</p>
+
+          <label for="resourceLink">External Resource Link</label>
+          <input
+            type="url"
+            id="resourceLink"
+            placeholder="https://example.com"
+          />
+
+          <label for="resourceDescription">Description</label>
+          <textarea
+            id="resourceDescription"
+            placeholder="Add a short description..."
+          ></textarea>
+
+          <button type="submit" id="saveResourceBtn">Save Resource</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="/js/resources.js"></script>
+  </body>
+</html>

@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Course Workspace | Study Portal</title>
+
+    <link rel="stylesheet" href="/css/course.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.boxicons.com/3.0.8/fonts/basic/boxicons.min.css"
+    />
+  </head>
+
+  <body>
+    <header class="workspace-header">
+      <a href="/html/courses.html" class="back-link">
+        <i class="bx bx-arrow-back"></i>
+        Back to My Courses
+      </a>
+
+      <div class="course-heading">
+        <p>COURSE WORKSPACE</p>
+        <h1 id="workspaceCourseName">Loading course...</h1>
+        <span id="workspaceCourseDetails"></span>
+      </div>
+    </header>
+
+    <main>
+      <!-- COURSE OVERVIEW -->
+      <section class="workspace-overview">
+        <div class="overview-card">
+          <div class="overview-icon">
+            <i class="bx bx-book-open"></i>
+          </div>
+          <div>
+            <p>Course Progress</p>
+            <h2 id="workspaceProgress">0%</h2>
+          </div>
+        </div>
+
+        <div class="overview-card">
+          <div class="overview-icon">
+            <i class="bx bx-folder"></i>
+          </div>
+          <div>
+            <p>Study Materials</p>
+            <h2 id="resourceCount">0</h2>
+          </div>
+        </div>
+
+        <div class="overview-card">
+          <div class="overview-icon">
+            <i class="bx bx-task"></i>
+          </div>
+          <div>
+            <p>Assignments</p>
+            <h2 id="assignmentCount">0</h2>
+          </div>
+        </div>
+
+        <div class="overview-card">
+          <div class="overview-icon">
+            <i class="bx bx-calendar"></i>
+          </div>
+          <div>
+            <p>Upcoming Deadlines</p>
+            <h2 id="deadlineCount">0</h2>
+          </div>
+        </div>
+      </section>
+
+      <!-- STUDY MATERIALS -->
+      <section class="workspace-section">
+        <div class="section-heading">
+          <div>
+            <h2>Study Materials</h2>
+            <p>Upload your files or save useful online resources.</p>
+          </div>
+        </div>
+
+        <div class="workspace-grid">
+          <!-- UPLOAD FILE -->
+          <div class="workspace-panel">
+            <h3><i class="bx bx-upload"></i> Upload a File</h3>
+            <p class="panel-description">
+              Add PDFs, Word documents, presentations and other study files.
+            </p>
+
+            <form id="fileResourceForm">
+              <div class="form-group">
+                <label for="resourceFile">Choose a file</label>
+                <input
+                  type="file"
+                  id="resourceFile"
+                  accept=".pdf,.doc,.docx,.ppt,.pptx,.xls,.xlsx,.txt"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="fileResourceCategory">Resource Category</label>
+                <select id="fileResourceCategory" required>
+                  <option value="Lecture Notes">Lecture Notes</option>
+                  <option value="Textbooks">Textbooks</option>
+                  <option value="Presentations">Presentations</option>
+                  <option value="Videos">Videos</option>
+                  <option value="Past Papers">Past Papers</option>
+                  <option value="Other Resources">Other Resources</option>
+                </select>
+              </div>
+
+              <button type="submit" class="primary-btn">
+                <i class="bx bx-upload"></i>
+                Upload File
+              </button>
+            </form>
+          </div>
+
+          <!-- ADD EXTERNAL LINK -->
+          <div class="workspace-panel">
+            <h3><i class="bx bx-link"></i> Add a Resource Link</h3>
+            <p class="panel-description">
+              Save links to websites, videos and online documents.
+            </p>
+
+            <form id="linkResourceForm">
+              <div class="form-group">
+                <label for="resourceTitle">Resource Name</label>
+                <input
+                  type="text"
+                  id="resourceTitle"
+                  placeholder="e.g. IFRS 18 Lecture"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="resourceUrl">Resource URL</label>
+                <input
+                  type="url"
+                  id="resourceUrl"
+                  placeholder="https://example.com"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="linkResourceCategory">Resource Category</label>
+                <select id="linkResourceCategory" required>
+                  <option value="Lecture Notes">Lecture Notes</option>
+                  <option value="Textbooks">Textbooks</option>
+                  <option value="Presentations">Presentations</option>
+                  <option value="Videos">Videos</option>
+                  <option value="Past Papers">Past Papers</option>
+                  <option value="Other Resources">Other Resources</option>
+                </select>
+              </div>
+
+              <button type="submit" class="primary-btn">
+                <i class="bx bx-link"></i>
+                Save Link
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <div class="resource-list">
+          <h3>Your Resources</h3>
+
+          <!-- RESOURCE SEARCH -->
+          <div class="resource-toolbar">
+            <input
+              type="search"
+              id="resourceSearch"
+              placeholder="Search your resources..."
+            />
+
+            <select id="resourceCategoryFilter">
+              <option value="All">All Categories</option>
+              <option value="Lecture Notes">Lecture Notes</option>
+              <option value="Textbooks">Textbooks</option>
+              <option value="Presentations">Presentations</option>
+              <option value="Videos">Videos</option>
+              <option value="Past Papers">Past Papers</option>
+              <option value="Other Resources">Other Resources</option>
+            </select>
+            <select id="resourceSort">
+              <option value="newest">Newest First</option>
+              <option value="oldest">Oldest First</option>
+              <option value="az">Name (A–Z)</option>
+              <option value="za">Name (Z–A)</option>
+            </select>
+          </div>
+
+          <div id="resourcesContainer" class="item-list">
+            <p class="empty-message">No resources added yet.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ASSIGNMENTS -->
+      <section class="workspace-section">
+        <div class="section-heading">
+          <div>
+            <h2>Assignments</h2>
+            <p>Keep track of your course tasks.</p>
+          </div>
+        </div>
+
+        <div class="workspace-panel">
+          <form id="assignmentForm">
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="assignmentTitle">Assignment Name</label>
+                <input
+                  type="text"
+                  id="assignmentTitle"
+                  placeholder="e.g. Accounting Assignment 1"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="assignmentDueDate">Due Date</label>
+                <input type="date" id="assignmentDueDate" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="assignmentDescription">Description</label>
+              <textarea
+                id="assignmentDescription"
+                rows="3"
+                placeholder="Add assignment instructions..."
+              ></textarea>
+            </div>
+
+            <button type="submit" class="primary-btn">
+              <i class="bx bx-plus"></i>
+              Add Assignment
+            </button>
+          </form>
+        </div>
+
+        <!-- ASSIGNMENT PROGRESS TRACKER -->
+        <div class="assignment-progress">
+          <div class="progress-heading">
+            <h3>Assignment Progress</h3>
+            <p>Track how much of your coursework you've completed.</p>
+          </div>
+
+          <div class="progress-stats">
+            <div class="progress-stat">
+              <span>Total Assignments</span>
+              <h2 id="progressTotal">0</h2>
+            </div>
+
+            <div class="progress-stat">
+              <span>Completed</span>
+              <h2 id="progressCompleted">0</h2>
+            </div>
+
+            <div class="progress-stat">
+              <span>Pending</span>
+              <h2 id="progressPending">0</h2>
+            </div>
+
+            <div class="progress-stat">
+              <span>Completion</span>
+              <h2 id="progressPercentage">0%</h2>
+            </div>
+          </div>
+
+          <div class="progress-bar-container">
+            <div id="assignmentProgressBar" class="progress-bar-fill"></div>
+          </div>
+
+          <p id="progressMessage">
+            Add assignments to start tracking your progress.
+          </p>
+        </div>
+
+        <!-- ASSIGNMENT LIST -->
+        <div id="assignmentsContainer" class="item-list">
+          <p class="empty-message">No assignments added yet.</p>
+        </div>
+      </section>
+
+      <!-- DEADLINES -->
+      <section class="workspace-section">
+        <div class="section-heading">
+          <div>
+            <h2>Deadlines</h2>
+            <p>See upcoming and overdue assignment deadlines.</p>
+          </div>
+        </div>
+
+        <div id="deadlinesContainer" class="item-list">
+          <p class="empty-message">No deadlines available.</p>
+        </div>
+      </section>
+    </main>
+
+    <script src="/js/course.js"></script>
+  </body>
+</html>
