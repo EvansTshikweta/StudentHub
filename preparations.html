@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Preparations | StudentHub</title>
+
+    <link rel="stylesheet" href="/css/preparations.css" />
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Boxicons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+      <div class="study-portal">
+        <i class="bx bxs-graduation"></i>
+        <h1>StudentHub</h1>
+      </div>
+
+      <div class="links">
+        <a href="/html/home.html">Dashboard</a>
+        <a href="/html/courses.html">My Courses</a>
+        <a href="/html/schedule.html">Schedule</a>
+        <a href="/html/resources.html">Resources</a>
+        <a href="/html/preparations.html" class="active">Preparations</a>
+        <a href="/html/settings.html">Settings</a>
+      </div>
+
+      <div class="search-input">
+        <i class="bx bx-search"></i>
+        <input type="text" placeholder="Search preparations..." />
+      </div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content">
+      <!-- PAGE HEADER -->
+      <section class="page-header">
+        <div>
+          <h1>Preparation Centre</h1>
+          <p>Plan your studies and get ready for your upcoming assessments.</p>
+        </div>
+
+        <button class="primary-btn" type="button">
+          <i class="bx bx-plus"></i>
+          New Preparation
+        </button>
+      </section>
+
+      <!-- OVERVIEW -->
+      <section class="overview-grid">
+        <div class="overview-card">
+          <div class="overview-icon blue">
+            <i class="bx bx-book-open"></i>
+          </div>
+          <div>
+            <p>Total Preparations</p>
+            <h2>0</h2>
+          </div>
+        </div>
+
+        <div class="overview-card">
+          <div class="overview-icon purple">
+            <i class="bx bx-time-five"></i>
+          </div>
+          <div>
+            <p>Upcoming Assessments</p>
+            <h2>0</h2>
+          </div>
+        </div>
+
+        <div class="overview-card">
+          <div class="overview-icon green">
+            <i class="bx bx-check-circle"></i>
+          </div>
+          <div>
+            <p>Completed Tasks</p>
+            <h2>0</h2>
+          </div>
+        </div>
+
+        <div class="overview-card">
+          <div class="overview-icon orange">
+            <i class="bx bx-target-lock"></i>
+          </div>
+          <div>
+            <p>Study Goals</p>
+            <h2>0</h2>
+          </div>
+        </div>
+      </section>
+
+      <!-- UPCOMING ASSESSMENTS -->
+      <section class="content-section">
+        <div class="section-heading">
+          <div>
+            <h2>Upcoming Assessments</h2>
+            <p>Keep track of the tests and exams you need to prepare for.</p>
+          </div>
+
+          <a href="/html/schedule.html"
+            >View Schedule <i class="bx bx-right-arrow-alt"></i
+          ></a>
+        </div>
+
+        <div class="assessment-grid">
+          <div class="assessment-card">
+            <div class="assessment-top">
+              <span class="assessment-type">Test</span>
+              <span class="assessment-status">Upcoming</span>
+            </div>
+
+            <h3>Financial Accounting</h3>
+            <p><i class="bx bx-calendar"></i> No date added</p>
+            <p><i class="bx bx-book"></i> Study the relevant learning units.</p>
+
+            <div class="assessment-progress">
+              <div class="progress-label">
+                <span>Preparation progress</span>
+                <span>0%</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-fill" style="width: 0%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="assessment-card">
+            <div class="assessment-top">
+              <span class="assessment-type purple-type">Exam</span>
+              <span class="assessment-status">Upcoming</span>
+            </div>
+
+            <h3>Management</h3>
+            <p><i class="bx bx-calendar"></i> No date added</p>
+            <p><i class="bx bx-book"></i> Review your study material.</p>
+
+            <div class="assessment-progress">
+              <div class="progress-label">
+                <span>Preparation progress</span>
+                <span>0%</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-fill purple-fill" style="width: 0%"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="assessment-card">
+            <div class="assessment-top">
+              <span class="assessment-type green-type">Assignment</span>
+              <span class="assessment-status">Upcoming</span>
+            </div>
+
+            <h3>Statistics</h3>
+            <p><i class="bx bx-calendar"></i> No date added</p>
+            <p><i class="bx bx-book"></i> Practise the relevant questions.</p>
+
+            <div class="assessment-progress">
+              <div class="progress-label">
+                <span>Preparation progress</span>
+                <span>0%</span>
+              </div>
+              <div class="progress-track">
+                <div class="progress-fill green-fill" style="width: 0%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- STUDY CHECKLIST AND GOALS -->
+      <section class="two-column-layout">
+        <!-- CHECKLIST -->
+        <div class="content-panel">
+          <div class="section-heading">
+            <div>
+              <h2>Study Checklist</h2>
+              <p>Keep track of your preparation tasks.</p>
+            </div>
+
+            <span class="task-count">0 / 5</span>
+          </div>
+
+          <div class="checklist">
+            <label class="checklist-item">
+              <input type="checkbox" />
+              <span>Review lecture notes</span>
+            </label>
+
+            <label class="checklist-item">
+              <input type="checkbox" />
+              <span>Read prescribed chapters</span>
+            </label>
+
+            <label class="checklist-item">
+              <input type="checkbox" />
+              <span>Complete practice questions</span>
+            </label>
+
+            <label class="checklist-item">
+              <input type="checkbox" />
+              <span>Review previous assessments</span>
+            </label>
+
+            <label class="checklist-item">
+              <input type="checkbox" />
+              <span>Identify difficult topics</span>
+            </label>
+          </div>
+
+          <button class="secondary-btn" type="button">
+            <i class="bx bx-plus"></i> Add Checklist Task
+          </button>
+        </div>
+
+        <!-- STUDY GOALS -->
+        <div class="content-panel">
+          <div class="section-heading">
+            <div>
+              <h2>Study Goals</h2>
+              <p>Stay focused on what you want to achieve.</p>
+            </div>
+          </div>
+
+          <div class="goal-card">
+            <div class="goal-icon">
+              <i class="bx bx-bullseye"></i>
+            </div>
+
+            <div>
+              <h3>Weekly Study Target</h3>
+              <p>Set a goal for your weekly study hours.</p>
+            </div>
+          </div>
+
+          <div class="goal-card">
+            <div class="goal-icon">
+              <i class="bx bx-book-reader"></i>
+            </div>
+
+            <div>
+              <h3>Complete Learning Units</h3>
+              <p>Work through your course learning units.</p>
+            </div>
+          </div>
+
+          <div class="goal-card">
+            <div class="goal-icon">
+              <i class="bx bx-trending-up"></i>
+            </div>
+
+            <div>
+              <h3>Improve Test Performance</h3>
+              <p>Track your progress and improve your results.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PREPARATION NOTES -->
+      <section class="content-panel notes-section">
+        <div class="section-heading">
+          <div>
+            <h2>Preparation Notes</h2>
+            <p>Write down important reminders and topics to revisit.</p>
+          </div>
+        </div>
+
+        <textarea placeholder="Write your preparation notes here..."></textarea>
+
+        <button class="primary-btn save-notes-btn" type="button">
+          <i class="bx bx-save"></i> Save Notes
+        </button>
+      </section>
+    </main>
+
+    <script src="/js/preparations.js"></script>
+  </body>
+</html>
